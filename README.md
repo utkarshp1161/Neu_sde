@@ -3,4 +3,4 @@ Code to paper: Discovering mesoscopic descriptions of collective animal movement
 
 
 # ACKNOWLEGDEMENT
-I used: https://gitlab.com/felix.dietrich/sde-identification/-/tree/master/Paper%20Supplemental%20Material/code/notebooks/sde as a reference for my work
+I used: [Link text Here](https://gitlab.com/felix.dietrich/sde-identification/-/tree/master/) as a reference for my work
