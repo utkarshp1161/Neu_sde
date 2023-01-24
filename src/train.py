@@ -1,30 +1,16 @@
 import tensorflow as tf
-
 import matplotlib.pyplot as plt
 import numpy as np
-import sys
-sys.path.append("..") 
-
 from utils.modelbuilder import ModelBuilder
 from utils.approxSDE import SDEApproximationNetwork
 from utils.train_utils import SDEIdentification
-
-
-# to plot pretty histograms
-import seaborn as sns
 import pandas as pd
 
 def main():
-    # notebook parameters
     random_seed = 2
-    step_size = 1e-2  #1e-2  # step size
-    n_pts = 100000   # number of points
-
     n_layers = 5
     n_dim_per_layer = 150
-
     n_dimensions = 2
-
     LEARNING_RATE = 1e-3
     ACTIVATIONS = tf.nn.elu
     VALIDATION_SPLIT = .1
