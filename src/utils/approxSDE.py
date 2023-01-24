@@ -8,12 +8,9 @@ import numpy as np
 
 class SDEApproximationNetwork(tf.keras.Model):
     """
-    A neural network sde_model that uses a given
-    sde_model network to predict drift and diffusivity
-    of an SDE, and trains it using EM- or Milstein-scheme
-    based loss functions.
+    Euler-Mauriyama based SDE estimation network
     """
-    VALID_METHODS = ["euler", "milstein", "milstein approx"]
+    VALID_METHODS = ["euler"]
 
     def __init__(self,
                  sde_model: tf.keras.Model,
@@ -66,7 +63,7 @@ class SDEApproximationNetwork(tf.keras.Model):
         """
         #print("reached_in euler_mauriyama_pdf")
         drift_, diffusivity_ = model_(yn_)
-        print("reached_in euler_mauriyama_pdf -- Neural net executed")
+        #print("reached_in euler_mauriyama_pdf -- Neural net executed")
         #print(drift_.shape, diffusivity_.shape, step_size_.shape, ynp1_.shape, yn_.shape)
         #print("step_size----------------------------",tf.print(step_size_)) # 0.04
 
@@ -133,7 +130,7 @@ class SDEApproximationNetwork(tf.keras.Model):
         else:
             raise ValueError(f"Diffusivity type <{diffusivity_type}> not supported. Use one of {ModelBuilder.DIFF_TYPES}.")
 
-        print("done-euler-mauriyama")
+        #print("done-euler-mauriyama")
         return approx_normal.log_prob(ynp1_)
 
     @staticmethod

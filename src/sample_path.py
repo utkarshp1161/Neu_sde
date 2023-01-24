@@ -1,3 +1,4 @@
+""" Sample a path from learnt Neura SDE model"""
 from utils.modelbuilder import ModelBuilder
 import tensorflow as tf
 import numpy as np
