@@ -9,10 +9,10 @@ tfd = tfp.distributions
 from tqdm import tqdm
 
 
-def main(sample_pts = 100000):
-    data = pd.read_csv("/home/ece/utkarsh/fish_traj_extract/PyDaddy/pydaddy/data/model_data/vector/ternary.csv", sep =" ", header=None)
+def main(sample_pts = 100000, read_path_file = "", write_path = "", read_path_model = ""):
+    data = pd.read_csv(read_path_file, sep =" ", header=None)
     data = data.values
-    #data = np.load("/home/ece/utkarsh/fish_traj_extract/nature_paper_data/data/raw_data/30/30_extracted.npy") # experimental data
+    #data = np.load("read_path_file") # experimental data
     n_dimensions = 2 #4
     n_layers = 5
     n_dim_per_layer = 150
@@ -28,7 +28,7 @@ def main(sample_pts = 100000):
                                             diffusivity_type=diffusivity_type,
                                             activation=ACTIVATIONS)
 
-    loaded_model.load_weights("/home/ece/utkarsh/fish_traj_extract/on_pydaddy_data/sim_vec_ternary/augmented_data/rot_mirror_75")
+    loaded_model.load_weights(read_path_model)
 
     #np.random.seed(42)
     #a,b = np.random.uniform(-0.002,0.03,[2])
@@ -76,10 +76,10 @@ def main(sample_pts = 100000):
     path = np.array(path)
     print(path.shape)
 
-    np.save("/home/ece/utkarsh/fish_traj_extract/on_pydaddy_data/sim_vec_ternary/augmented_data/rot_mirror_75/sampled_x_0_bc.npy", path.reshape(-1,2))
+    np.save(write_path, path.reshape(-1,2))
 
 
 
 if __name__ == '__main__':
-    main()
+    main(sample_pts = 100000, read_path_file = "path_to_file", write_path = "path", read_path_model = "path_to_model_dir" )
 

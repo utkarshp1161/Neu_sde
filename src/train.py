@@ -6,7 +6,7 @@ from utils.approxSDE import SDEApproximationNetwork
 from utils.train_utils import SDEIdentification
 import pandas as pd
 
-def main():
+def main(read_path_file = "", model_save_path = ""):
     random_seed = 2
     n_layers = 5
     n_dim_per_layer = 150
@@ -42,7 +42,7 @@ def main():
     dt = 0.04
     #dt = 0.12
 
-    data = np.load("/home/ece/utkarsh/fish_traj_extract/on_pydaddy_data/sim_vec_ternary/arsh_new_data/augmented/augmented.npy")
+    data = np.load(read_path_file)
     x_data = data[:-1]
     y_data = data[1 :]
 
@@ -69,7 +69,7 @@ def main():
     print(f"Training loss final, Euler: {hist_euler.history['loss']}")
     print(f"Validation loss final, Euler: {hist_euler.history['val_loss']}")
 
-    encoder_euler.save("/home/ece/utkarsh/fish_traj_extract/on_pydaddy_data/sim_vec_ternary/arsh_new_data/augmented")
+    encoder_euler.save(model_save_path)
 
 if __name__ == "__main__":
-    main()
+    main(read_path_file="path_to_file", model_save_path="path_to_save_model")

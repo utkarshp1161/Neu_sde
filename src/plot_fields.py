@@ -20,7 +20,7 @@ from utils.postprocess import get_cov_matrix_per_arg
 import tensorflow as tf
 import numpy as np
 
-def main():
+def main(read_model_path = ""):
     n_dimensions = 2 #4
     n_layers = 5
     n_dim_per_layer = 150
@@ -37,7 +37,7 @@ def main():
                                             diffusivity_type=diffusivity_type,
                                             activation=ACTIVATIONS)
 
-    loaded_model.load_weights("/home/ece/utkarsh/fish_traj_extract/on_pydaddy_data/sim_vec_ternary/arsh_new_data")
+    loaded_model.load_weights(read_model_path)
 
     def fx(x, y):
         val = np.empty_like(x)
@@ -81,6 +81,6 @@ def main():
     plt.savefig("diffusion.pdf") 
 
 if __name__ == '__main__':
-    main()
+    main(read_model_path = "path_to_model_dir")
 
 
