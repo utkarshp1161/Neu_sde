@@ -10,17 +10,17 @@ Code to paper: Discovering mesoscopic descriptions of collective animal movement
 2. To train :
     - Enter path of the training data in train.py
     - Enter path of where to save model weights in train.py
-    - Change hyperparameters for training in train.py (as per need)
+    - Change hyperparameters for training in train.py (as per need).
     - Run python train.py
 
-3. To visualize the field plots from learnt Neural model:
-    - Enter path of model weights plot_field.py
-    - change parameters for visualization in plot_field.py (as per need)
+3. To visualize the field plots from trained Neural model:
+    - Enter path of model weights in plot_field.py
+    - Change parameters for visualization in plot_field.py (as per need)
     - Run python plot_field.py
 
 4. Extra utilites:
     - Data augmentation: Use augment.py to augment the data as per discussed in the paper (You will need to train on this new data)
-    - Sample path: Use sample_path.py to sample a path from learnt neural model
+    - Sample path: Use sample_path.py to sample a path from learnt neural model.
 
 
 
