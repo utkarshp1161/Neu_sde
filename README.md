@@ -8,10 +8,10 @@ Code to paper: Discovering mesoscopic descriptions of collective animal movement
 1. Install the dependencies mentioned in the requirements(requirements.txt) file
 
 2. To train :
-            - Enter path of the training data in train.py
-            - Enter path of where to save model weights in train.py
-            - Change hyperparameters for training in train.py (as per need)
-            - Run python train.py
+        - Enter path of the training data in train.py
+        - Enter path of where to save model weights in train.py
+        - Change hyperparameters for training in train.py (as per need)
+        - Run python train.py
 
 3. To visualize the field plots from learnt Neural model:
                                 *a) Enter path of model weights plot_field.py
