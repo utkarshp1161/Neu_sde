@@ -33,8 +33,8 @@ def main(read_path_file = "", model_save_path = ""):
 
     STD_MIN_VALUE = 1e-13  # the minimal number that the diffusivity models can have
 
-    #data = pd.read_csv("/home/ece/utkarsh/fish_traj_extract/PyDaddy/pydaddy/data/model_data/vector/augmented_pairwise.csv", sep = " ", header = None)
-    #data = pd.read_csv("/home/ece/utkarsh/fish_traj_extract/on_pydaddy_data/sim_vec_ternary/arsh_new_data/n30_ter.csv", sep ="\t", header=None)
+    #data = pd.read_csv("", sep = " ", header = None)
+    #data = pd.read_csv("", sep ="\t", header=None)
     #data = data.values[:,:2]
     #x_data = data.values[:-1]
     #y_data = data.values[1 :]
