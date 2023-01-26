@@ -7,7 +7,7 @@ import numpy as np
 
 from matplotlib import font_manager
 
-locations = ['/home/ece/utkarsh/Helvetica'] 
+#locations = ['/Helvetica'] 
 
 font_files = font_manager.findSystemFonts(fontpaths = locations)
 for file in font_files:
