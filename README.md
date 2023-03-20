@@ -1,5 +1,5 @@
 # Neu_sde
-Code to paper: Discovering mesoscopic descriptions of collective animal movement with neural stochastic modelling
+Code to paper: [Discovering mesoscopic descriptions of collective animal movement with neural stochastic modelling](https://arxiv.org/abs/2106.09004)
 
 
 ![Pipeline](fig/pipeline.png)
