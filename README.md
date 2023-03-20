@@ -31,7 +31,7 @@ Code to paper: Discovering mesoscopic descriptions of collective animal movement
 
 
 # Data:
-Can be made available on request
+analysis(directory)
 
 # ACKNOWLEGDEMENT
-I used: [Dietrich et al.](https://gitlab.com/felix.dietrich/sde-identification/-/tree/master/) as a reference for my work
+We used: [Dietrich et al.](https://arxiv.org/abs/2106.09004) as a reference for my work
