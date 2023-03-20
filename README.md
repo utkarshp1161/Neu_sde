@@ -34,4 +34,4 @@ Code to paper: Discovering mesoscopic descriptions of collective animal movement
 analysis(directory)
 
 # ACKNOWLEGDEMENT
-We used: [Dietrich et al.](https://arxiv.org/abs/2106.09004) as a reference for my work
+We used: [Dietrich et al.](https://arxiv.org/abs/2106.09004) as a reference for our work
